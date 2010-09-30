@@ -21,7 +21,6 @@
  * BLOCK
  *****/
 
-
 import java.io.IOException;
 
 import org.jruby.Ruby;
@@ -36,6 +35,7 @@ import org.jruby.ext.openssl.x509store.BouncyCastleASN1FormatHandler;
 import org.jruby.runtime.load.BasicLibraryService;
 
 public class OpensslextService implements BasicLibraryService {
+    @Override
     public boolean basicLoad(Ruby runtime) throws IOException {
         RubyModule ossl = runtime.getModule("OpenSSL");
         try {
